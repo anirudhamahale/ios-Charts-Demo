@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 
-class BarChartViewController: UIViewController {
+class BarChartViewController: UIViewController, ChartViewDelegate {
 
     @IBOutlet weak var barChartView: BarChartView!
     
@@ -18,7 +18,7 @@ class BarChartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        barChartView.delegate = self
         // Do any additional setup after loading the view.
         setChart(dataPoints: months, values: unitsSold)
     }
@@ -28,6 +28,11 @@ class BarChartViewController: UIViewController {
         barChartView.noDataTextColor = UIColor.red
         barChartView.noDataFont = UIFont(name: "Helvetica Neue", size: 30.0)
         barChartView.xAxis.labelPosition = .bottom
+//        barChartView.animate(xAxisDuration: 2.0)
+        barChartView.animate(yAxisDuration: 2.0, easingOption: .linear)
+        
+        let eleven = ChartLimitLine(limit: 11.0, label: "Target")
+        barChartView.rightAxis.addLimitLine(eleven)
         
         var dataEntries: [BarChartDataEntry] = []
         for i in 0..<dataPoints.count {
@@ -40,15 +45,28 @@ class BarChartViewController: UIViewController {
         barChartView.data = chartData
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        print("\(entry.description)")
     }
-    */
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
