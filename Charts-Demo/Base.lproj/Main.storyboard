@@ -36,9 +36,24 @@
                     <view key="view" contentMode="scaleToFill" id="cGW-T2-3ed">
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3F2-H8-A3Y" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="84" width="662.5" height="664"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BlJ-6e-jgy" firstAttribute="top" secondItem="3F2-H8-A3Y" secondAttribute="bottom" constant="20" id="7xL-Wy-Hja"/>
+                            <constraint firstItem="3F2-H8-A3Y" firstAttribute="leading" secondItem="cGW-T2-3ed" secondAttribute="leading" constant="20" id="JN9-uc-bd1"/>
+                            <constraint firstAttribute="trailing" secondItem="3F2-H8-A3Y" secondAttribute="trailing" constant="20" id="wKX-ea-6FT"/>
+                            <constraint firstItem="3F2-H8-A3Y" firstAttribute="top" secondItem="zbG-xK-OT9" secondAttribute="bottom" constant="20" id="zZe-bb-h8N"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bar Chart " id="iMx-GF-Vtv"/>
+                    <connections>
+                        <outlet property="barChartView" destination="3F2-H8-A3Y" id="sYL-wK-i1f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bK-eL-54c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

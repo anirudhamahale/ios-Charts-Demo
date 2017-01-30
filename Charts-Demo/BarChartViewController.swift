@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import Charts
 
 class BarChartViewController: UIViewController {
 
+    @IBOutlet weak var barChartView: BarChartView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        barChartView.noDataText = "You need to provide data for the chart."
+        barChartView.noDataTextColor = UIColor.red
+        barChartView.noDataFont = UIFont(name: "Helvetica Neue", size: 30.0)
     }
 
     override func didReceiveMemoryWarning() {
