@@ -22,6 +22,8 @@ class MasterViewController: UITableViewController {
                       "ScatterChart (with squares, triangles, circles, … and more)",
     ]
     
+    let segueNames = ["barChart","lineChart"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,8 +50,8 @@ class MasterViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "\(segueNames[indexPath.row])", sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
 
 }
