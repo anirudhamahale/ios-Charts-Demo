@@ -50,7 +50,7 @@ class MasterViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row > 2 {
+        if indexPath.row > segueNames.count-1 {
             tableView.deselectRow(at: indexPath, animated: true)
             return
         }
