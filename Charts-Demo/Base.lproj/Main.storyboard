@@ -10,26 +10,25 @@
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
-        <scene sceneID="tyx-5O-C3A">
+        <scene sceneID="9pI-HZ-rup">
             <objects>
-                <navigationController id="jtA-zv-8Sq" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fK8-xj-JLf">
+                <navigationController storyboardIdentifier="barChartNav" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Uip-ue-8Kz" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="erR-X0-GD2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="QnP-QK-xmT" kind="show" id="wgh-Sa-DNs"/>
-                        <segue destination="JIl-7f-qir" kind="show" id="pc3-8j-fyg"/>
+                        <segue destination="QnP-QK-xmT" kind="relationship" relationship="rootViewController" id="jRt-Xk-DUf"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m6s-tJ-HhZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DJd-mj-3Ya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="125" y="-121"/>
+            <point key="canvasLocation" x="854" y="-101"/>
         </scene>
-        <!--Bar Chart View Controller-->
+        <!--Bar Chart -->
         <scene sceneID="hZj-AJ-efX">
             <objects>
-                <viewController id="QnP-QK-xmT" customClass="BarChartViewController" customModule="Charts_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BarChartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QnP-QK-xmT" customClass="BarChartViewController" customModule="Charts_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zbG-xK-OT9"/>
                         <viewControllerLayoutGuide type="bottom" id="BlJ-6e-jgy"/>
@@ -37,23 +36,15 @@
                     <view key="view" contentMode="scaleToFill" id="cGW-T2-3ed">
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eK4-AF-uaY">
-                                <rect key="frame" x="0.0" y="20" width="703" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="mol-RM-HZ3"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Bar Chart " id="iMx-GF-Vtv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bK-eL-54c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854" y="-84"/>
+            <point key="canvasLocation" x="1522" y="-101"/>
         </scene>
-        <!--Line View Controller-->
+        <!--Line Chart-->
         <scene sceneID="fsL-2f-rp8">
             <objects>
                 <viewController id="JIl-7f-qir" customClass="LineViewController" customModule="Charts_Demo" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,10 +57,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Line Chart" id="fqv-YS-7uE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ldb-Hd-BP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854" y="616"/>
+            <point key="canvasLocation" x="1522" y="560"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="5tG-HI-9L5">
@@ -105,8 +97,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="zt8-nJ-Lda"/>
                     <connections>
-                        <segue destination="QnP-QK-xmT" kind="showDetail" identifier="barChart" id="cTt-4A-LvV"/>
-                        <segue destination="JIl-7f-qir" kind="showDetail" identifier="lineChart" id="TsQ-4v-WFy"/>
+                        <segue destination="Uip-ue-8Kz" kind="showDetail" identifier="barChart" id="0wF-n3-tNe"/>
+                        <segue destination="FN0-lu-DtL" kind="showDetail" identifier="lineChart" id="Kan-iM-wbn"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRM-js-ZBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -132,19 +124,32 @@
         <!--Split View Controller-->
         <scene sceneID="rPP-pE-eSV">
             <objects>
-                <splitViewController id="Crb-bt-2m9" sceneMemberID="viewController">
+                <splitViewController storyboardIdentifier="SplitViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Crb-bt-2m9" customClass="SplitViewController" customModule="Charts_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="vpQ-Yi-dwS" kind="relationship" relationship="masterViewController" id="d40-mF-h3j"/>
-                        <segue destination="jtA-zv-8Sq" kind="relationship" relationship="detailViewController" id="51m-FL-nqH"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZcQ-Xj-doZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-604" y="-446"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MdW-dV-P9v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FN0-lu-DtL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Aq-op-tfP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JIl-7f-qir" kind="relationship" relationship="rootViewController" id="zsn-ki-VDt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ilK-bl-HcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="560"/>
+        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="pc3-8j-fyg"/>
-        <segue reference="wgh-Sa-DNs"/>
-    </inferredMetricsTieBreakers>
 </document>

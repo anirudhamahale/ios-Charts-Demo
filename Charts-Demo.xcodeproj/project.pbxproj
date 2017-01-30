@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC36B3F31E3F1178001BE756 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC36B3F21E3F1178001BE756 /* SplitViewController.swift */; };
 		BCC043191E3EFA4B00309F3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC043181E3EFA4B00309F3A /* AppDelegate.swift */; };
 		BCC0431B1E3EFA4B00309F3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC0431A1E3EFA4B00309F3A /* ViewController.swift */; };
 		BCC0431E1E3EFA4B00309F3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC0431C1E3EFA4B00309F3A /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC36B3F21E3F1178001BE756 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		BCC043151E3EFA4B00309F3A /* Charts-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Charts-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC043181E3EFA4B00309F3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCC0431A1E3EFA4B00309F3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				BCC043181E3EFA4B00309F3A /* AppDelegate.swift */,
 				BCC0432C1E3F0BE800309F3A /* ChartsController */,
 				BCC0431A1E3EFA4B00309F3A /* ViewController.swift */,
+				BC36B3F21E3F1178001BE756 /* SplitViewController.swift */,
 				BCC0432A1E3EFFB200309F3A /* MasterViewController.swift */,
 				BCC0431C1E3EFA4B00309F3A /* Main.storyboard */,
 				BCC0431F1E3EFA4B00309F3A /* Assets.xcassets */,
@@ -158,6 +161,7 @@
 				BCC0432E1E3F0C0000309F3A /* BarChartViewController.swift in Sources */,
 				BCC043191E3EFA4B00309F3A /* AppDelegate.swift in Sources */,
 				BCC0432B1E3EFFB200309F3A /* MasterViewController.swift in Sources */,
+				BC36B3F31E3F1178001BE756 /* SplitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +323,7 @@
 				BCC043291E3EFA4B00309F3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
