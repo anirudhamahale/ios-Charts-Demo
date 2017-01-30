@@ -12,6 +12,7 @@
 		BCC0431E1E3EFA4B00309F3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC0431C1E3EFA4B00309F3A /* Main.storyboard */; };
 		BCC043201E3EFA4B00309F3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCC0431F1E3EFA4B00309F3A /* Assets.xcassets */; };
 		BCC043231E3EFA4B00309F3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC043211E3EFA4B00309F3A /* LaunchScreen.storyboard */; };
+		BCC0432B1E3EFFB200309F3A /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC0432A1E3EFFB200309F3A /* MasterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		BCC0431F1E3EFA4B00309F3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCC043221E3EFA4B00309F3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCC043241E3EFA4B00309F3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCC0432A1E3EFFB200309F3A /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				BCC043181E3EFA4B00309F3A /* AppDelegate.swift */,
 				BCC0431A1E3EFA4B00309F3A /* ViewController.swift */,
+				BCC0432A1E3EFFB200309F3A /* MasterViewController.swift */,
 				BCC0431C1E3EFA4B00309F3A /* Main.storyboard */,
 				BCC0431F1E3EFA4B00309F3A /* Assets.xcassets */,
 				BCC043211E3EFA4B00309F3A /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				BCC0431B1E3EFA4B00309F3A /* ViewController.swift in Sources */,
 				BCC043191E3EFA4B00309F3A /* AppDelegate.swift in Sources */,
+				BCC0432B1E3EFFB200309F3A /* MasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +267,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.letsappit.Charts-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -275,6 +280,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.letsappit.Charts-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
