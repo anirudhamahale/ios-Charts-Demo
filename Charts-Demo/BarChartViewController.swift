@@ -13,8 +13,8 @@ class BarChartViewController: UIViewController {
 
     @IBOutlet weak var barChartView: BarChartView!
     
-    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-    let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+    lazy var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    lazy var unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +27,11 @@ class BarChartViewController: UIViewController {
         barChartView.noDataText = "You need to provide data for the chart."
         barChartView.noDataTextColor = UIColor.red
         barChartView.noDataFont = UIFont(name: "Helvetica Neue", size: 30.0)
+        barChartView.xAxis.labelPosition = .bottom
         
         var dataEntries: [BarChartDataEntry] = []
         for i in 0..<dataPoints.count {
-            let dataEntry = BarChartDataEntry(x: Double(i), y: values[i], data: dataPoints[i] as AnyObject?)
+            let dataEntry = BarChartDataEntry(x: Double(i), y: values[i])
             dataEntries.append(dataEntry)
         }
         
