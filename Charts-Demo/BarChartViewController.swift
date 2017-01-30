@@ -18,7 +18,6 @@ class BarChartViewController: UIViewController, ChartViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        barChartView.delegate = self
         // Do any additional setup after loading the view.
         setChart(dataPoints: months, values: unitsSold)
     }
@@ -30,6 +29,9 @@ class BarChartViewController: UIViewController, ChartViewDelegate {
         barChartView.xAxis.labelPosition = .bottom
 //        barChartView.animate(xAxisDuration: 2.0)
         barChartView.animate(yAxisDuration: 2.0, easingOption: .linear)
+        barChartView.chartDescription?.text = ""
+        barChartView.delegate = self
+        barChartView.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 1)
         
         let eleven = ChartLimitLine(limit: 11.0, label: "Target")
         barChartView.rightAxis.addLimitLine(eleven)
@@ -41,6 +43,8 @@ class BarChartViewController: UIViewController, ChartViewDelegate {
         }
         
         let chartDataSet = BarChartDataSet(values: dataEntries, label: "Units Sold")
+//        chartDataSet.colors = ChartColorTemplates.joyful()
+        chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
         let chartData = BarChartData(dataSet: chartDataSet)
         barChartView.data = chartData
     }
